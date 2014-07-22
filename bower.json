@@ -1,0 +1,24 @@
+{
+  "name": "maygoupordown",
+  "version": "0.0.1",
+  "homepage": "https://github.com/adamlofting/maygoupordown",
+  "authors": [
+    "Adam Lofting <contactme@adamlofting.com>"
+  ],
+  "description": "A utility app that tracks a number over time",
+  "main": "app.js",
+  "keywords": [
+    "metrics"
+  ],
+  "license": "MPL2",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  }
+}
