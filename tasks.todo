@@ -1,8 +1,32 @@
  MVP:
- ☐ Basic app setup
- ☐ Login
- ☐ An HTML template
+ ☐ Travis CI
+ ☐ Sequlelize Model
+ ☐ Save this as a boilerplate
+ ☐ Choose a username
+ ☐ Add number to track (URL and selector)
+ ☐ Test a number
+ ☐ Save to the DB via sequalize
+ ☐ Poll numbers on a regular basis
+   ☐ re-try on error
+ ☐ Number scraper
+   ☐ Filter out anything except digits and dots
+ ☐ API reporting CSV
+ ☐ API reporting JSON
+ ☐ public page for each number, with graph
+ ☐ video on devtools selector
+
 
 
 Nice to have:
  ☐ Turn these into github issues later
+ ☐ Limit on number of numbers per user
+ ☐ Age out older records
+ ☐ Alert on error
+ ☐ Email notifications
+
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+ ✔ Basic app setup @done (14-07-24 22:08)
+ ✔ Login @done (14-07-24 22:08)
+ ✔ An HTML template @done (14-07-24 22:08)

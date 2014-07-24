@@ -80,21 +80,19 @@ app.get('/', function (req, res) {
   var email = req.session.email;
   res.render('home', {
     currentUser: email,
-    authorized: (req.session.authorized)
+    authorized: (req.session.authorized),
+    message: 'home page'
   });
 });
 
-app.get('/setup', restrict, function (req, res) {
+app.get('/testpage', restrict, function (req, res) {
   var email = req.session.email;
   res.render('home', {
     currentUser: email,
-    authorized: (req.session.authorized)
+    authorized: (req.session.authorized),
+    message: 'logged in page'
   });
 });
-
-
-
-
 
 var port = Number(process.env.PORT || 5000);
 
