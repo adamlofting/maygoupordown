@@ -1,6 +1,6 @@
 {
   "name": "maygoupordown",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A utility app that tracks a number over time",
   "main": "app.js",
   "engines": {
