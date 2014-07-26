@@ -1,9 +1,8 @@
  MVP:
- ☐ Travis CI
- ☐ Sequlelize Model
+ ☐ Add a testing framework
  ☐ Save this as a boilerplate
- ☐ Choose a username
- ☐ Add number to track (URL and selector)
+ ☐ User can choose a username
+ ☐ Add a number to track (URL and selector)
  ☐ Test a number
  ☐ Save to the DB via sequalize
  ☐ Poll numbers on a regular basis
@@ -28,6 +27,8 @@ Nice to have:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
- ✔ Basic app setup @done (14-07-24 22:08)
+ ✔ Sequlelize Model @done (14-07-26 16:09)
+ ✔ Travis CI @done (14-07-26 15:38)
  ✔ Login @done (14-07-24 22:08)
+ ✔ Basic app setup @done (14-07-24 22:08)
  ✔ An HTML template @done (14-07-24 22:08)

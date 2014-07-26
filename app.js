@@ -6,7 +6,8 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var csrf = require('csurf');
-// var async = require('async');
+var http = require('http');
+var db = require('./models');
 
 var app = express();
 
@@ -103,6 +104,14 @@ app.use('/bower', express.static(__dirname + '/bower_components'));
 
 var port = Number(process.env.PORT || 5000);
 
-app.listen(port, function () {
-  console.log("Listening on " + port);
+db.sequelize.sync().complete(function(err) {
+  if (err) {
+    throw err[0];
+  } else {
+    app.listen(port, function () {
+      console.log("Listening on " + port);
+    });
+  }
 });
+
+
