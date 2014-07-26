@@ -1,6 +1,11 @@
 var express = require("express");
 var logfmt = require("logfmt");
 var helmet = require('helmet');
+var favicon = require('serve-favicon');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+var csrf = require('csurf');
 // var async = require('async');
 
 var app = express();
@@ -19,18 +24,19 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 
 app.use(logfmt.requestLogger());
-app.use(express.favicon());
-app.use(express.urlencoded());
-app.use(express.cookieParser(process.env.COOKIE_SECRET));
-app.use(express.session({
+app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(session({
   secret: process.env.COOKIE_SECRET,
   cookie: {
     httpOnly: true
   },
+  resave: true,
+  saveUninitialized:true
 }));
-app.use(express.csrf());
+app.use(csrf({"cookie":true}));
 app.use(function (req, res, next) {
-  res.cookie('XSRF-TOKEN', req.csrfToken());
   res.locals.token = req.csrfToken();
   next();
 });
@@ -40,9 +46,6 @@ app.use(helmet.csp(cspPolicy));
 app.use(helmet.iexss());
 app.use(helmet.contentTypeOptions());
 app.use(helmet.hidePoweredBy());
-app.use(app.router);
-app.use(express.static(__dirname + '/public'));
-app.use('/bower', express.static(__dirname + '/bower_components'));
 
 // middleware to restrict access to internal routes
 function restrict(req, res, next) {
@@ -93,6 +96,10 @@ app.get('/testpage', restrict, function (req, res) {
     message: 'logged in page'
   });
 });
+
+// more middleware to exiecute after routes
+app.use(express.static(__dirname + '/public'));
+app.use('/bower', express.static(__dirname + '/bower_components'));
 
 var port = Number(process.env.PORT || 5000);
 
