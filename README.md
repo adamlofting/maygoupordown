@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/adamlofting/maygoupordown.png)](https://travis-ci.org/adamlofting/maygoupordown)
+[![Dependency Status](https://gemnasium.com/adamlofting/maygoupordown.png)](https://gemnasium.com/adamlofting/maygoupordown)
+[![Code Climate](https://codeclimate.com/github/adamlofting/maygoupordown.png)](https://codeclimate.com/github/adamlofting/maygoupordown)
+
 maygoupordown
 =============
 
