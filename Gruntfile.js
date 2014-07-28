@@ -53,14 +53,23 @@ module.exports = function (grunt) {
         src: nodeJS,
         options: nodeJSHint
       }
+    },
+    mochaTest: {
+      test: {
+        options: {
+          reporter: 'spec'
+        },
+        src: ['test/**/*.js']
+      }
     }
   });
 
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');
+  grunt.loadNpmTasks('grunt-mocha-test');
 
   // Clean & verify code (Run before commit)
-  grunt.registerTask('default', ['jsbeautifier:modify', 'jshint']);
+  grunt.registerTask('default', ['jsbeautifier:modify', 'jshint', 'mochaTest']);
 
   // Verify code (Read only)
   grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint']);

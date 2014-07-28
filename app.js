@@ -6,7 +6,6 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 var csrf = require('csurf');
-var http = require('http');
 var db = require('./models');
 
 var app = express();
@@ -26,7 +25,9 @@ app.set('view engine', 'handlebars');
 
 app.use(logfmt.requestLogger());
 app.use(favicon(__dirname + '/public/favicon.ico'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 app.use(cookieParser(process.env.COOKIE_SECRET));
 app.use(session({
   secret: process.env.COOKIE_SECRET,
@@ -34,9 +35,11 @@ app.use(session({
     httpOnly: true
   },
   resave: true,
-  saveUninitialized:true
+  saveUninitialized: true
 }));
-app.use(csrf({"cookie":true}));
+app.use(csrf({
+  "cookie": true
+}));
 app.use(function (req, res, next) {
   res.locals.token = req.csrfToken();
   next();
@@ -104,7 +107,7 @@ app.use('/bower', express.static(__dirname + '/bower_components'));
 
 var port = Number(process.env.PORT || 5000);
 
-db.sequelize.sync().complete(function(err) {
+db.sequelize.sync().complete(function (err) {
   if (err) {
     throw err[0];
   } else {
@@ -113,5 +116,3 @@ db.sequelize.sync().complete(function(err) {
     });
   }
 });
-
-

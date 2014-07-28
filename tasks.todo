@@ -1,14 +1,14 @@
  MVP:
- ☐ Add a testing framework
+ ☐ Check out https://coveralls.io/
  ☐ Save this as a boilerplate
+ ☐ Finish spec and code for number scraper
+   ☐ Filter out anything except digits and dots
  ☐ User can choose a username
  ☐ Add a number to track (URL and selector)
  ☐ Test a number
  ☐ Save to the DB via sequalize
  ☐ Poll numbers on a regular basis
    ☐ re-try on error
- ☐ Number scraper
-   ☐ Filter out anything except digits and dots
  ☐ API reporting CSV
  ☐ API reporting JSON
  ☐ public page for each number, with graph
@@ -27,6 +27,7 @@ Nice to have:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+ ✔ Add a testing framework @done (14-07-28 22:16)
  ✔ Sequlelize Model @done (14-07-26 16:09)
  ✔ Travis CI @done (14-07-26 15:38)
  ✔ Login @done (14-07-24 22:08)

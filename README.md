@@ -12,6 +12,7 @@ A utility app that tracks a number over time
 * Node.js & npm
 * Bower: `npm install -g bower`
 * grunt-cli: `npm install -g grunt-cli`
+* mocha: `npm install -g mocha`
 * heroku toolbelt
 * postgres database
 

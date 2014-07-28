@@ -7,7 +7,10 @@
     "$": true,
     "document": true,
     "navigator": true,
-    "window": true
+    "window": true,
+    "describe": true,
+    "it": true,
+    "mocha": true
   },
   "bitwise": true,
   "curly": true,
