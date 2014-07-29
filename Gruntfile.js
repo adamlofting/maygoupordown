@@ -60,16 +60,20 @@ module.exports = function (grunt) {
           reporter: 'spec'
         },
         src: ['test/**/*.js']
-      }
+      },
+    },
+    exec: {
+      coverage: 'NODE_ENV=test istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec'
     }
   });
 
   grunt.loadNpmTasks('grunt-jsbeautifier');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-mocha-test');
+  grunt.loadNpmTasks('grunt-exec');
 
   // Clean & verify code (Run before commit)
-  grunt.registerTask('default', ['jsbeautifier:modify', 'jshint', 'mochaTest']);
+  grunt.registerTask('default', ['jsbeautifier:modify', 'jshint', 'exec:coverage']);
 
   // Verify code (Read only)
   grunt.registerTask('validate', ['jsbeautifier:verify', 'jshint']);

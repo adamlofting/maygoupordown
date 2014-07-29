@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/adamlofting/maygoupordown.png)](https://travis-ci.org/adamlofting/maygoupordown)
 [![Dependency Status](https://gemnasium.com/adamlofting/maygoupordown.png)](https://gemnasium.com/adamlofting/maygoupordown)
 [![Code Climate](https://codeclimate.com/github/adamlofting/maygoupordown.png)](https://codeclimate.com/github/adamlofting/maygoupordown)
+[![Coverage Status](https://coveralls.io/repos/adamlofting/maygoupordown/badge.png)](https://coveralls.io/r/adamlofting/maygoupordown)
 
 maygoupordown
 =============

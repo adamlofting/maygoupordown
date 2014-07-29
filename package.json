@@ -46,6 +46,9 @@
     "mocha": "~1.21.3",
     "chai": "~1.9.1",
     "grunt-mocha": "~0.4.11",
-    "grunt-mocha-test": "~0.11.0"
+    "grunt-mocha-test": "~0.11.0",
+    "istanbul": "~0.3.0",
+    "coveralls": "~2.11.1",
+    "grunt-exec": "~0.4.6"
   }
 }
