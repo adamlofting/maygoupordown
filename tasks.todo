@@ -1,5 +1,8 @@
  MVP:
  ☐ Check out https://coveralls.io/
+ ☐ Add info to readme about how to contribute
+ ☐ Localization
+ ☐ Front-end Framework
  ☐ Save this as a boilerplate
  ☐ Finish spec and code for number scraper
    ☐ Filter out anything except digits and dots
@@ -22,7 +25,7 @@ Nice to have:
  ☐ Age out older records
  ☐ Alert on error
  ☐ Email notifications
- ☐ Add info to readme about how to contribute
+
 
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
